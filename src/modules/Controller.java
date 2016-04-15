@@ -9,8 +9,10 @@ import java.util.regex.Pattern;
 
 public class Controller {
 
-    /*this regex checking the Username,
-    allowing it to contain not more than 16 latin letters*/
+    /**
+     * this regex checking the Username,
+     * allowing it to contain not more than 16 latin letters
+     */
     private final String LOGIN_REGEX = "[a-zA-Z]{1,16}";
 
     private String username;
@@ -28,11 +30,23 @@ public class Controller {
      * This method is creating the game
      */
     public void play() {
+
+        //Checking username
+        checkUsername(model);
+
+        //Checking input data
+        checkingInputData(model);
+
+    }
+
+    /**
+     *
+     */
+    private void checkUsername(Model model) {
         Scanner scanner = new Scanner(System.in);
 
         view.printMessage(Message.NAME);
 
-        //Checking username
         while (!Pattern.matches(LOGIN_REGEX, username = scanner.next())) {
             view.printMessage(Message.ERR_NAME);
             view.printMessage(Message.NAME);
@@ -41,8 +55,13 @@ public class Controller {
         view.printMessage(Message.GUESS_NUMBER);
         view.printMessage(Message.BOUNDS);
         view.printMessage(model.getLowBound() + " and " + model.getTopBound() + "\n");
+    }
 
-        //Checking input data
+    /**
+     * @param model
+     */
+    private void checkingInputData(Model model) {
+
         while (true) {
             int in;
             Scanner sc = new Scanner(System.in);
@@ -75,7 +94,5 @@ public class Controller {
                 view.printMessage(Message.RETRY);
             }
         }
-
-
     }
 }
