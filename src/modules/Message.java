@@ -1,6 +1,7 @@
 package modules;
 
 /**
+ * This enum class is designed to store text constants for View output
  * Created by Kocherga Vitalii on 15.04.2016.
  */
 
