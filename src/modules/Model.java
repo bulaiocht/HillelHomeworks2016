@@ -8,9 +8,24 @@ import java.util.Random;
 
 public class Model {
 
+    /**
+     *
+     */
     private int inputNumber;
+
+    /**
+     *
+     */
     private int secretNumber;
+
+    /**
+     *
+     */
     private int lowBound = 0;
+
+    /**
+     *
+     */
     private int topBound = 100;
 
     public Model() {
@@ -24,7 +39,6 @@ public class Model {
 
     /**
      * Method consists main logic of a game.
-     *
      * @param userNumber player's input
      * @return true if user guessed number correctly
      * or false if user guessed it incorrectly

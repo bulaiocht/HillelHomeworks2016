@@ -32,6 +32,7 @@ public class Controller {
 
         view.printMessage(Message.NAME);
 
+        //Checking username
         while (!Pattern.matches(LOGIN_REGEX, username = scanner.next())) {
             view.printMessage(Message.ERR_NAME);
             view.printMessage(Message.NAME);
@@ -41,6 +42,7 @@ public class Controller {
         view.printMessage(Message.BOUNDS);
         view.printMessage(model.getLowBound() + " and " + model.getTopBound() + "\n");
 
+        //Checking input data
         while (true) {
             int in;
             Scanner sc = new Scanner(System.in);

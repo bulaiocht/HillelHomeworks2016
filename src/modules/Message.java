@@ -5,6 +5,7 @@ package modules;
  */
 
 enum Message {
+
     NAME("Please, enter your name:\t"),
     ERR_NAME("Incorrect name\n"),
     ERR_INPUT("Incorrect input!\t"),
