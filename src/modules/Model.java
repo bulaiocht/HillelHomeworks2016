@@ -39,6 +39,7 @@ public class Model {
 
     /**
      * Method consists main logic of a game.
+     *
      * @param userNumber player's input
      * @return true if user guessed number correctly
      * or false if user guessed it incorrectly

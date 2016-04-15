@@ -35,7 +35,7 @@ public class Controller {
         checkUsername(model);
 
         //Checking input data
-        checkingInputData(model);
+        checkInputData(model);
 
     }
 
@@ -43,6 +43,7 @@ public class Controller {
      *
      */
     private void checkUsername(Model model) {
+
         Scanner scanner = new Scanner(System.in);
 
         view.printMessage(Message.NAME);
@@ -60,13 +61,14 @@ public class Controller {
     /**
      * @param model
      */
-    private void checkingInputData(Model model) {
+    private void checkInputData(Model model) {
 
         while (true) {
             int in;
             Scanner sc = new Scanner(System.in);
             try {
                 in = sc.nextInt();
+
                 //checking if user input number is inside the bounds
                 if (in > model.getTopBound() || in < model.getLowBound()) {
                     view.printMessage(Message.ERR_BOUND);

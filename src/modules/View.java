@@ -14,7 +14,6 @@ public class View {
     }
 
     /**
-     *
      * @param message
      */
     void printMessage(Message message) {
@@ -22,7 +21,6 @@ public class View {
     }
 
     /**
-     *
      * @param message
      * @return
      */
